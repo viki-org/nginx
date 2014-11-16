@@ -1,4 +1,4 @@
-nginx (1.6.2.viki) trusty; urgency=medium
+nginx (1.6.2viki-1) trusty; urgency=medium
 
   * Non-maintainer upload.
   * Trusty
