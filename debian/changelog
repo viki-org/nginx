@@ -1,3 +1,10 @@
+nginx (1.6.2-1~viki.2) trusty; urgency=medium
+
+  * Non-maintainer upload.
+  * Trusty
+
+ -- neeravkumar <me@nero.im>  Sun, 16 Nov 2014 15:55:19 +0800
+
 nginx (1.6.2-1~dotdeb.1) stable; urgency=medium
 
   * Imported Upstream version 1.6.2
