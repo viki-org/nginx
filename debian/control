@@ -45,40 +45,9 @@ Description: small, powerful, scalable web/proxy server
  This is a dependency package to install either nginx-full (by default) or
  nginx-light.
 
-Package: nginx-doc
-Architecture: all
-Section: doc
-Depends: lsb-base (>= 3.2-14), ${misc:Depends}
-Description: small, powerful, scalable web/proxy server - documentation
- Nginx ("engine X") is a high-performance web and reverse proxy server
- created by Igor Sysoev. It can be used both as a standalone web server
- and as a proxy to reduce the load on back-end HTTP or mail servers.
- .
- This package provides extra documentation to help unleash the power of Nginx.
-
-Package: nginx-common
-Architecture: all
-Depends: lsb-base (>= 3.2-14), ${misc:Depends}
-Replaces: nginx (<< 0.8.54-4),
-          nginx-extras (<< 0.8.54-4),
-          nginx-full (<< 0.8.54-4),
-          nginx-light (<< 0.8.54-4)
-Breaks: nginx (<< 0.8.54-4),
-        nginx-extras (<< 0.8.54-4),
-        nginx-full (<< 0.8.54-4),
-        nginx-light (<< 0.8.54-4)
-Suggests: fcgiwrap, nginx-doc
-Description: small, powerful, scalable web/proxy server - common files
- Nginx ("engine X") is a high-performance web and reverse proxy server
- created by Igor Sysoev. It can be used both as a standalone web server
- and as a proxy to reduce the load on back-end HTTP or mail servers.
- .
- This package contains base configuration files used by all versions of
- nginx.
-
 Package: nginx-full
 Architecture: any
-Depends: nginx-common (= ${source:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: nginx (<< 1.4.5-1)
 Provides: httpd, httpd-cgi, nginx
 Conflicts: nginx-extras, nginx-light, nginx-naxsi
@@ -126,7 +95,7 @@ Description: nginx web/proxy server (standard version) - debugging symbols
 Package: nginx-light
 Architecture: any
 Priority: extra
-Depends: nginx-common (= ${source:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: nginx (<< 1.4.5-1)
 Provides: httpd, httpd-cgi, nginx
 Conflicts: nginx-extras, nginx-full, nginx-naxsi
@@ -167,8 +136,7 @@ Description: nginx web/proxy server (basic version) - debugging symbols
 Package: nginx-extras
 Architecture: any
 Priority: extra
-Depends: nginx-common (= ${source:Version}),
-         ${misc:Depends},
+Depends: ${misc:Depends},
          ${perl:Depends},
          ${shlibs:Depends}
 Breaks: nginx (<< 1.4.5-1)
@@ -220,7 +188,7 @@ Description: nginx web/proxy server (extended version) - debugging symbols
 Package: nginx-naxsi
 Architecture: any
 Priority: extra
-Depends: nginx-common (= ${source:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Breaks: nginx (<< 1.4.5-1),
         nginx-naxsi-ui (<< 1.4.5-1)
 Provides: httpd, httpd-cgi, nginx
