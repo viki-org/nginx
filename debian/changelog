@@ -1,3 +1,9 @@
+nginx (1.6.2viki-1.1) trusty; urgency=medium
+
+  * Fix dependency
+
+ -- neeravkumar <me@nero.im>  Sun, 16 Nov 2014 20:12:20 +0800
+
 nginx (1.6.2viki-1) trusty; urgency=medium
 
   * Non-maintainer upload.
